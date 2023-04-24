@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="lightblue">
+        <br>
+        <div>
+<label id="minutes">00</label>
+<label id="colon">:</label>
+<label id="seconds">00</label>
+<style>
+#seconds {
+  font-size: 3em;
+  color:white;
+  }
+
+#minutes {
+  font-size: 3em;
+   color:white;
+}
+#colon {
+  font-size: 3em;
+   color:white;
+}
+</style>
+<script type="text/javascript">
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
+
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
+
+
+</div>
+
+<h1>Here is your dead shot clue</h1>
+<h2>Last second clue ,to get nearer to your treasure</h2>
+<img src="C:\Users\hp\OneDrive\Pictures\Screenshots\7.png" width="500" height="300">
+<style>
+</style>
+<br> <br>
+<h3>ENTER YOUR ANSWER:</h3>
+
+<input type="text" id="answer" placeholder="Enter your answer here">
+	<button onclick="checkAnswer()">Submit</button>
+
+	<script>
+		function checkAnswer() {
+			var answer = document.getElementById("answer").value;
+			if (answer.toLowerCase() === "plant") {
+				alert("Congratulations! You have solved the riddle and revealed the location of the next clue!");
+				// replace the url with the actual location of the next clue
+				window.location.href = "file:///C:/Users/hp/OneDrive/Desktop/Documents/clue8.html";
+			} else {
+				alert("Sorry, that's not the correct answer.its a deadshot!!");
+                        window.location.href = "file:///C:/Users/hp/OneDrive/Desktop/Documents/clue5.html";
+			}
+		}
+	</script>
+</body>
+</html>
