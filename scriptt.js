@@ -66,7 +66,7 @@ function checkGuess() {
 
 	if (guessedLetters.indexOf("_") === -1) {
 		const resultElement = document.getElementById("result");
-alert("Congratulations! You have solved the riddle and revealed the location of the next clue!");
+                 alert("Congratulations! You have solved the riddle and revealed the location of the next clue!");
 				// replace the url with the actual location of the next clue
 				window.location.href = "clue7.html";
 	}
