@@ -60,7 +60,7 @@ function checkGuess() {
 
 	if (!found) {
 		alert("Sorry, that letter is not in the word.This is the deadshot round.");
-            window.location.href = "file:///C:/Users/hp/OneDrive/Desktop/Documents/clue1.html";
+            window.location.href = "clue1.html";
 		return;
 	}
 
@@ -68,6 +68,6 @@ function checkGuess() {
 		const resultElement = document.getElementById("result");
 alert("Congratulations! You have solved the riddle and revealed the location of the next clue!");
 				// replace the url with the actual location of the next clue
-				window.location.href = "file:///C:/Users/hp/OneDrive/Desktop/Documents/clue7.html";
+				window.location.href = "clue7.html";
 	}
 }
