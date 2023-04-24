@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cryptic Riddle</title>
+	<style>
+body {
+  background-image: url('https://t3.ftcdn.net/jpg/01/93/20/26/360_F_193202625_kFtFhgw3uREIlRq5rA79he8byB45f6lG.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+		
+		h1 {
+			text-align: center;
+			font-size: 2.5em;
+			margin-top: 50px;
+                  color:black
+		}
+          h2{
+			font-size: 1.5em;
+			margin-top: 50px;
+                  color:black
+		}
+		p {
+			font-size: 1.2em;
+			line-height: 1.6em;
+			margin: 30px 50px;
+			text-align: center;
+		}
+		input[type=text] {
+			display: block;
+			margin: 30px auto;
+			padding: 10px;
+			font-size: 1.2em;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 0 0 5px #999;
+			text-align: center;
+		}
+		button {
+			display: block;
+			margin: 30px auto;
+			padding: 10px 30px;
+			font-size: 1.2em;
+			border: none;
+			border-radius: 5px;
+			background-color: #ffd500;
+			color: #333;
+			cursor: pointer;
+			box-shadow: 0 0 5px #999;
+		}
+	</style>
+</head>
+<body>
+<p style="background-image: url('C:\Users\hp\Downloads\CLUE11 IMG.jpg');">
+ <body>
+        <br>
+        <div>
+<label id="minutes">00</label>
+<label id="colon">:</label>
+<label id="seconds">00</label>
+<style>
+#seconds {
+  font-size: 3em;
+  color:white;
+  }
+
+#minutes {
+  font-size: 3em;
+   color:white;
+}
+#colon {
+  font-size: 3em;
+   color:white;
+}
+</style>
+<script type="text/javascript">
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
+
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
+
+
+</div>
+      <h2>YOU HAVE SUCCESSFULLY REGISTERED </h2>
+      <H1> WELCOME TO MYSTERY ISLAND, THIS IS THE FIRST CLUE TO GET CLOSER TO YOUR TREASURE</H1>
+	<p>Decode the riddle below to reveal the location of the next clue:</p>
+	<p>I am always hungry,<br>
+	I must always be fed,<br>
+	The finger I touch,<br>
+	Will soon turn red.<br>
+	What am I?</p>
+	<input type="text" id="answer" placeholder="Enter your answer here">
+	<button onclick="checkAnswer()">Submit</button>
+
+	<script>
+		function checkAnswer() {
+			var answer = document.getElementById("answer").value;
+			if (answer.toLowerCase() === "fire") {
+				alert("Congratulations! You have solved the riddle and revealed the location of the next clue!");
+				// replace the url with the actual location of the next clue
+				window.location.href = "file:///C:/Users/hp/OneDrive/Desktop/Documents/clue23.html";
+			} else {
+				alert("Sorry, that's not the correct answer. Please try again.");
+			}
+		}
+	</script>
+</body>
+</html>
