@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+        <br>
+        <div>
+<label id="minutes">00</label>
+<label id="colon">:</label>
+<label id="seconds">00</label>
+<style>
+#seconds {
+  font-size: 3em;
+  color:white;
+  }
+
+#minutes {
+  font-size: 3em;
+   color:white;
+}
+#colon {
+  font-size: 3em;
+   color:white;
+}
+</style>
+<script type="text/javascript">
+        var minutesLabel = document.getElementById("minutes");
+        var secondsLabel = document.getElementById("seconds");
+        var totalSeconds = 0;
+        setInterval(setTime, 1000);
+
+        function setTime()
+        {
+            ++totalSeconds;
+            secondsLabel.innerHTML = pad(totalSeconds%60);
+            minutesLabel.innerHTML = pad(parseInt(totalSeconds/60));
+        }
+
+        function pad(val)
+        {
+            var valString = val + "";
+            if(valString.length < 2)
+            {
+                return "0" + valString;
+            }
+            else
+            {
+                return valString;
+            }
+        }
+    </script>
+
+
+</div>
+
+<h1>Here is your second clue</h1>
+<h2>To crack this clue you need to know about some mystery island </h2>
+<style>
+body {
+  background-image: url('file:///C:/Users/hp/Downloads/island.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+
+<img src="C:\Users\hp\Downloads\oak.jpg" width="250" height="300">
+<br> <br>
+<h3>Guess the island Above </h3>
+
+<input type="text" id="answer" placeholder="Enter your answer here">
+	<button onclick="checkAnswer()">Submit</button>
+
+	<script>
+		function checkAnswer() {
+			var answer = document.getElementById("answer").value;
+			if (answer.toLowerCase() === "oak") {
+				alert("Congratulations! You have solved the riddle and revealed the location of the next clue!");
+				// replace the url with the actual location of the next clue
+				window.location.href = "file:///C:/Users/hp/OneDrive/Desktop/Documents/clue5.html";
+			} else {
+				alert("Sorry, that's not the correct answer. Please try again.");
+			}
+		}
+	</script>
+<h3>CLUE </h3>
+
+<p style="color:red"><ol> 
+             <li>It is a privately owned island in Lunenburg County on the south shore of Nova Scotia, Canada.</li>
+             <li>The island is best known for various theories about buried treasure or historical artifacts, and the associated attempts to explore the site.</li>
+             <li>A "curse" on the treasure is said to have originated more than a century ago and states that seven men will die in the search for the treasure before it is found.</li>
+<ol></p>
+
+</body>
+</html>
